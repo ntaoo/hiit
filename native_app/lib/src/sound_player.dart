@@ -1,11 +1,12 @@
 import 'dart:io';
 import 'package:flutter/services.dart';
+import 'package:hiit_timer/hiit_timer.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:audioplayer/audioplayer.dart';
 import 'package:rxdart/rxdart.dart';
 
-class SoundPlayer {
-  SoundPlayer() {
+class SoundPlayerImpl implements SoundPlayer {
+  SoundPlayerImpl() {
     _prepare();
   }
 

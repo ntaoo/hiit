@@ -1,6 +1,6 @@
 import 'dart:async';
-import 'package:hiit/model/src/defaults.dart';
 import 'package:rxdart/rxdart.dart';
+import 'defaults.dart';
 import 'timer.dart' as timer;
 
 export 'timer.dart' show Tick, Kind;

@@ -1,4 +1,4 @@
-import 'package:hiit/model/src/timer.dart';
+import 'package:hiit_timer/src/timer.dart';
 import 'package:test/test.dart';
 
 void expectTick(Tick actual, Tick expected) {

@@ -1,26 +1,28 @@
-import 'package:flutter/material.dart';
-import 'package:hiit/model/hiit.dart';
-import 'package:hiit/model/src/sound_player.dart';
-
-void main() => runApp(MyApp());
+import 'package:flutter_web/material.dart';
+import 'package:hiit_timer/hiit_timer.dart';
 
 final blackTextColor = Colors.indigo.shade700;
 final whiteTextColor = Colors.grey.shade300;
 
 class MyApp extends StatelessWidget {
+  MyApp({@required this.soundPlayer});
+
+  final SoundPlayer soundPlayer;
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Let's HIIT!!",
-      home: HomePage(title: "Let's HIIT!!"),
+      home: HomePage(title: "Let's HIIT!!", soundPlayer: soundPlayer),
     );
   }
 }
 
 class HomePage extends StatefulWidget {
-  HomePage({Key key, this.title}) : super(key: key);
+  HomePage({Key key, @required this.title, @required this.soundPlayer})
+      : super(key: key);
   final String title;
-  final SoundPlayer soundPlayer = SoundPlayer();
+  final SoundPlayer soundPlayer;
 
   @override
   HomePageState createState() => HomePageState();
@@ -77,12 +79,10 @@ class HomePageState extends State<HomePage> {
 }
 
 class HiitTimerPage extends StatefulWidget {
-  HiitTimerPage({Key key, this.soundPlayer})
-      : hiitTimer = HiitTimer(),
-        super(key: key);
+  HiitTimerPage({Key key, @required this.soundPlayer}) : super(key: key);
 
   final SoundPlayer soundPlayer;
-  final HiitTimer hiitTimer;
+  final HiitTimer hiitTimer = HiitTimer();
   @override
   _HiitTimerPageState createState() => _HiitTimerPageState();
 }

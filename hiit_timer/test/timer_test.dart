@@ -6,7 +6,7 @@
 // tree, read text, and verify that the values of widget properties are correct.
 
 import 'package:async/async.dart';
-import 'package:hiit/model/src/timer.dart';
+import 'package:hiit_timer/src/timer.dart';
 import 'package:test/test.dart';
 
 import 'helpers.dart';

@@ -1,6 +1,7 @@
 import 'package:async/async.dart';
-import 'package:hiit/model/src/hiit_timer.dart';
 import 'package:test/test.dart';
+
+import 'package:hiit_timer/src/hiit_timer.dart';
 
 import 'helpers.dart';
 

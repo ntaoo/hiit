@@ -28,6 +28,8 @@ dependencies:
   rxdart:
   audioplayer:
   path_provider:
+  hiit_timer:
+    path: ../hiit_timer
 
 dev_dependencies:
   flutter_test:
